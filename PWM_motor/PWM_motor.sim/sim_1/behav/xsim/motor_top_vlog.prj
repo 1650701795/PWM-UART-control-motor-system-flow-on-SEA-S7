@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../PWM_motor.srcs/sources_1/new/PWM_motor.v" \
+"../../../../PWM_motor.srcs/sources_1/new/uart_recv.v" \
+"../../../../PWM_motor.srcs/sources_1/new/uart_send.v" \
+"../../../../PWM_motor.srcs/sources_1/new/motor_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,104 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Jul 31 10:12:23 2020
+# Process ID: 13144
+# Current directory: D:/FPGA/PWM_motor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8840 D:\FPGA\PWM_motor\PWM_motor.xpr
+# Log file: D:/FPGA/PWM_motor/vivado.log
+# Journal file: D:/FPGA/PWM_motor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA/PWM_motor/PWM_motor.xpr
+update_compile_order -fileset sources_1
+file mkdir D:/FPGA/PWM_motor/PWM_motor.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open D:/FPGA/PWM_motor/PWM_motor.srcs/sim_1/new/testbench_PWM.v w ]
+add_files -fileset sim_1 D:/FPGA/PWM_motor/PWM_motor.srcs/sim_1/new/testbench_PWM.v
+update_compile_order -fileset sim_1
+launch_simulation
+source PWM_motor.tcl
+update_compile_order -fileset sim_1
+restart
+run all
+restart
+restart
+run all
+close [ open D:/FPGA/PWM_motor/PWM_motor.srcs/sources_1/new/uart_recv.v w ]
+add_files D:/FPGA/PWM_motor/PWM_motor.srcs/sources_1/new/uart_recv.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8 -scripts_only
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8 -scripts_only
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close [ open D:/FPGA/PWM_motor/PWM_motor.srcs/sources_1/new/uart_send.v w ]
+add_files D:/FPGA/PWM_motor/PWM_motor.srcs/sources_1/new/uart_send.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close [ open D:/FPGA/PWM_motor/PWM_motor.srcs/sources_1/new/motor_top.v w ]
+add_files D:/FPGA/PWM_motor/PWM_motor.srcs/sources_1/new/motor_top.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top motor_top [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top motor_top [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list sys_clk]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list sys_rst_n]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list uart_txd]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list uart_rxd]]
+place_ports sys_clk H4
+place_ports sys_rst_n D14
+place_ports uart_rxd E13
+place_ports uart_txd N10
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+launch_simulation
+launch_simulation
+launch_simulation
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+launch_simulation
+update_compile_order -fileset sources_1
+launch_simulation
+update_compile_order -fileset sources_1
+launch_simulation
+launch_simulation
+launch_simulation
+close_sim

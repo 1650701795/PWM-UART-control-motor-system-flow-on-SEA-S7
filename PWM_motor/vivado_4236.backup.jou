@@ -1,0 +1,103 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Jul 29 17:09:53 2020
+# Process ID: 4236
+# Current directory: D:/FPGA/PWM_motor
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19276 D:\FPGA\PWM_motor\PWM_motor.xpr
+# Log file: D:/FPGA/PWM_motor/vivado.log
+# Journal file: D:/FPGA/PWM_motor\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA/PWM_motor/PWM_motor.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+place_ports {pwmout[3]} E11
+set_property IOSTANDARD LVCMOS33 [get_ports [list {pwmout[3]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {pwmout[2]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {pwmout[1]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {pwmout[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list clk]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list dir]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list rst]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list sw]]
+place_ports {pwmout[2]} G14
+place_ports {pwmout[1]} F13
+place_ports {pwmout[0]} F14
+place_ports clk H4
+place_ports rst D14
+place_ports dir M2
+place_ports sw L2
+file mkdir D:/FPGA/PWM_motor/PWM_motor.srcs/constrs_1/new
+close [ open D:/FPGA/PWM_motor/PWM_motor.srcs/constrs_1/new/system.xdc w ]
+add_files -fileset constrs_1 D:/FPGA/PWM_motor/PWM_motor.srcs/constrs_1/new/system.xdc
+set_property target_constrs_file D:/FPGA/PWM_motor/PWM_motor.srcs/constrs_1/new/system.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/FPGA/PWM_motor/PWM_motor.runs/impl_1/PWM_motor.bit} [get_hw_devices xc7s15_0]
+current_hw_device [get_hw_devices xc7s15_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s15_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property PROGRAM.FILE {D:/FPGA/PWM_motor/PWM_motor.runs/impl_1/PWM_motor.bit} [get_hw_devices xc7s15_0]
+program_hw_devices [get_hw_devices xc7s15_0]
+refresh_hw_device [lindex [get_hw_devices xc7s15_0] 0]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {pwmout[3]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {pwmout[3]}]]
+set_property PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property PROGRAM.FILE {D:/FPGA/PWM_motor/PWM_motor.runs/impl_1/PWM_motor.bit} [get_hw_devices xc7s15_0]
+program_hw_devices [get_hw_devices xc7s15_0]
+refresh_hw_device [lindex [get_hw_devices xc7s15_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property PROGRAM.FILE {D:/FPGA/PWM_motor/PWM_motor.runs/impl_1/PWM_motor.bit} [get_hw_devices xc7s15_0]
+program_hw_devices [get_hw_devices xc7s15_0]
+refresh_hw_device [lindex [get_hw_devices xc7s15_0] 0]
+open_run impl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {pwmout[3]} {pwmout[2]} {pwmout[1]} {pwmout[0]}]]
+current_design synth_1
+save_constraints -force
+current_design impl_1
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list {pwmout[3]} {pwmout[2]} {pwmout[1]} {pwmout[0]}]]
+set_property IOSTANDARD LVCMOS33 [get_ports [list {pwmout[3]} {pwmout[2]} {pwmout[1]} {pwmout[0]}]]
+set_property IOSTANDARD LVTTL [get_ports [list {pwmout[3]} {pwmout[2]} {pwmout[1]} {pwmout[0]}]]
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property PROGRAM.FILE {D:/FPGA/PWM_motor/PWM_motor.runs/impl_1/PWM_motor.bit} [get_hw_devices xc7s15_0]
+program_hw_devices [get_hw_devices xc7s15_0]
+refresh_hw_device [lindex [get_hw_devices xc7s15_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s15_0]
+set_property PROGRAM.FILE {D:/FPGA/PWM_motor/PWM_motor.runs/impl_1/PWM_motor.bit} [get_hw_devices xc7s15_0]
+program_hw_devices [get_hw_devices xc7s15_0]
+refresh_hw_device [lindex [get_hw_devices xc7s15_0] 0]

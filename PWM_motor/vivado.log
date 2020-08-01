@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sat Aug  1 20:33:47 2020
+# Process ID: 4736
+# Current directory: D:/GitHub/GitHub_source/motor/PWM-UART-control-motor-system-flow-on-SEA-S7
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3428 D:\GitHub\GitHub_source\motor\PWM-UART-control-motor-system-flow-on-SEA-S7\PWM_motor.xpr
+# Log file: D:/GitHub/GitHub_source/motor/PWM-UART-control-motor-system-flow-on-SEA-S7/vivado.log
+# Journal file: D:/GitHub/GitHub_source/motor/PWM-UART-control-motor-system-flow-on-SEA-S7\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/GitHub/GitHub_source/motor/PWM-UART-control-motor-system-flow-on-SEA-S7/PWM_motor.xpr
+ININFO: [Project 1-313] Project file moved from 'D:/FPGA/PWM_motor' since last saveScScanning sources..Finished scanning sources
+WAWARNING: [Project 1-509] GeneratedRun file for 'synth_1' not founWARNING: [Project 1-509] GeneratedRun file for 'impl_1' not found
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+ININFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:12 . Memory (MB): peak = 674.773 ; gain = 93.766
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 8
+[Sat Aug  1 20:35:15 2020] Launched synth_1...
+Run output will be captured here: D:/GitHub/GitHub_source/motor/PWM-UART-control-motor-system-flow-on-SEA-S7/PWM_motor.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sat Aug  1 20:36:06 2020] Launched impl_1...
+Run output will be captured here: D:/GitHub/GitHub_source/motor/PWM-UART-control-motor-system-flow-on-SEA-S7/PWM_motor.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Aug  1 20:37:22 2020...
